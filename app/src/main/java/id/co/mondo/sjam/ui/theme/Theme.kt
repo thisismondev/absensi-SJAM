@@ -7,6 +7,9 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
 private val DarkColorScheme = darkColorScheme(
+    primary = blue1,
+    secondary = blue2,
+    tertiary = bluefont
 
 )
 

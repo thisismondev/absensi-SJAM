@@ -56,4 +56,13 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+
+//    Navigation
+    implementation("androidx.navigation:navigation-compose:2.9.6")
+//
+////    Supabase
+//    implementation(platform("io.github.jan-tennert.supabase:bom:3.2.6"))
+//    implementation("io.github.jan-tennert.supabase:postgrest-kt")
+//    implementation("io.github.jan-tennert.supabase:auth-kt")
 }
