@@ -9,6 +9,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -20,14 +24,20 @@ import id.co.mondo.sjam.ui.component.TextFieldCustom
 import id.co.mondo.sjam.ui.theme.SJAMTheme
 
 @Composable
-fun Regist(){
+fun Regist2() {
+
+    var password by remember { mutableStateOf("") }
+    var confirmPassword by remember { mutableStateOf("") }
+
+
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(20.dp)
     ) {
         Text(
-            text = "Buat Akun",
+            text = "Selangkah lagi",
             style = MaterialTheme.typography.titleLarge.copy(
                 fontSize = 32.sp, fontWeight = FontWeight.ExtraBold
             ),
@@ -46,57 +56,36 @@ fun Regist(){
             TextFieldCustom(
                 modifier = Modifier.fillMaxWidth(),
                 values = "",
-                label = "Nama Lengkap",
+                label = "Email",
                 onValueChange = {
                     it
                 }
             )
             TextFieldCustom(
                 modifier = Modifier.fillMaxWidth(),
-                values = "",
-                label = "Nomor Telepon",
+                values = password,
+                label = "Password",
                 onValueChange = {
-                    it
+                    password = it
                 },
-                keyboardType = KeyboardType.Number
+                keyboardType = KeyboardType.Password,
+                isPasswordField = true
             )
             TextFieldCustom(
                 modifier = Modifier.fillMaxWidth(),
-                values = "",
-                label = "Instansi",
+                values = confirmPassword,
+                label = "Confirm Password",
                 onValueChange = {
-                    it
-                }
-            )
-            TextFieldCustom(
-                modifier = Modifier.fillMaxWidth(),
-                values = "",
-                label = "Fakultas",
-                onValueChange = {
-                    it
-                }
-            )
-            TextFieldCustom(
-                modifier = Modifier.fillMaxWidth(),
-                values = "",
-                label = "Jurusan",
-                onValueChange = {
-                    it
-                }
-            )
-            TextFieldCustom(
-                modifier = Modifier.fillMaxWidth(),
-                values = "",
-                label = "Divisi",
-                onValueChange = {
-                    it
-                }
+                    confirmPassword = it
+                },
+                keyboardType = KeyboardType.Password,
+                isPasswordField = true
             )
         }
         Spacer(Modifier.padding(18.dp))
         ButtonCustom(
             modifier = Modifier.fillMaxWidth(),
-            label = "Selanjutnya",
+            label = "Register",
             onCLick = {
 
             }
@@ -107,8 +96,8 @@ fun Regist(){
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewRegist(){
+fun PreviewRegist2() {
     SJAMTheme {
-        Regist()
+        Regist2()
     }
 }
