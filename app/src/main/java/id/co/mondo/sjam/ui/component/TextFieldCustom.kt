@@ -46,7 +46,8 @@ fun TextFieldCustom(
         label = {
             Text(
                 text = label,
-                style = MaterialTheme.typography.titleMedium
+                style = MaterialTheme.typography.titleMedium,
+                color = Color.Gray
             )
         },
         colors = OutlinedTextFieldDefaults.colors(
@@ -67,9 +68,9 @@ fun TextFieldCustom(
                     Icon(
                         painter = painterResource(
                             if (isPasswordVisible)
-                                R.drawable.visibilityon
-                            else
                                 R.drawable.visibilityoff
+                            else
+                                R.drawable.visibilityon
                         ),
                         contentDescription = "Toggle Password Visibility",
                         tint = Color.LightGray
