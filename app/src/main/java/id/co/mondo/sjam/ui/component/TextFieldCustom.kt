@@ -1,6 +1,7 @@
 package id.co.mondo.sjam.ui.component
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Icon
@@ -26,7 +27,7 @@ import id.co.mondo.sjam.R
 
 @Composable
 fun TextFieldCustom(
-    modifier: Modifier = Modifier,
+    modifier: Modifier,
     values: String,
     label: String,
     onValueChange: (String) -> Unit,
@@ -91,6 +92,7 @@ fun PreviewTextField(){
             values = "",
             label = "Email",
             onValueChange = {},
+            modifier = Modifier.fillMaxWidth(),
             isPasswordField = false,
             keyboardType = KeyboardType.Email
         )
@@ -98,6 +100,7 @@ fun PreviewTextField(){
             values = "",
             label = "Password",
             onValueChange = {},
+            modifier = Modifier.fillMaxWidth(),
             isPasswordField = true,
             keyboardType = KeyboardType.Password,
 
