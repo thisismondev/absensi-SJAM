@@ -40,7 +40,7 @@ fun RecapScreen(
         modifier = Modifier.fillMaxSize(),
     ) {
         AppTopBar(
-            title = "Orang Tua",
+            title = "Recap Absen",
             onBackClick = {
                 navController.popBackStack()
             }
@@ -89,6 +89,7 @@ fun RecapScreen(
                 "Tidak hadir"
             )
         }
+        Spacer(Modifier.height(12.dp))
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth(),

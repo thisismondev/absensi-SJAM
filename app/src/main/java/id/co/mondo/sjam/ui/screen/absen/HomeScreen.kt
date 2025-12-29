@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -55,9 +56,9 @@ fun HomeScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(24.dp),
+                .padding(20.dp),
         ) {
-            HeadProfile()
+            HeadProfile(navController)
             Spacer(Modifier.height(24.dp))
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -162,7 +163,9 @@ fun HomeScreen(
 }
 
 @Composable
-fun HeadProfile() {
+fun HeadProfile(
+    navController: NavController
+) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -188,10 +191,18 @@ fun HeadProfile() {
                 style = MaterialTheme.typography.bodySmall
             )
         }
-        Icon(
-            imageVector = Icons.Default.Settings,
-            contentDescription = "Settings",
-        )
+        IconButton(
+            onClick = {
+                navController.navigate("setting")
+            }
+        ) {
+            Icon(
+                imageVector = Icons.Default.Settings,
+                contentDescription = "Settings",
+            )
+        }
+
+
 
     }
 }
@@ -211,6 +222,8 @@ fun previewHome() {
 @Composable
 fun previewProfile() {
     SJAMTheme {
-        HeadProfile()
+        HeadProfile(
+            navController = rememberNavController()
+        )
     }
 }
