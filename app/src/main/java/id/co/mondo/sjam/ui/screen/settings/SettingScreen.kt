@@ -110,6 +110,7 @@ fun SettingScreen(
                     label = "Edit",
                     modifier = Modifier.fillMaxWidth(),
                     onClick = {
+                        navController.navigate("profile")
 
                     }
                 )

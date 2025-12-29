@@ -9,6 +9,7 @@ import id.co.mondo.sjam.ui.screen.absen.RecapScreen
 import id.co.mondo.sjam.ui.screen.auth.Login
 import id.co.mondo.sjam.ui.screen.auth.Regist
 import id.co.mondo.sjam.ui.screen.auth.Regist2
+import id.co.mondo.sjam.ui.screen.settings.ProfileScreen
 import id.co.mondo.sjam.ui.screen.settings.SettingScreen
 
 @Composable
@@ -34,6 +35,9 @@ fun sjamApp(){
         }
         composable("setting") {
             SettingScreen(navController)
+        }
+        composable("profile") {
+            ProfileScreen(navController)
         }
     }
 }
