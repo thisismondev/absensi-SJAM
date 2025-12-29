@@ -88,7 +88,7 @@ fun Regist2(navController: NavController) {
         ButtonCustom(
             modifier = Modifier.fillMaxWidth(),
             label = "Register",
-            onCLick = {
+            onClick = {
 
             }
         )

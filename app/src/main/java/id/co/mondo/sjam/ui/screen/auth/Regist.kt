@@ -134,7 +134,7 @@ fun Regist(navController: NavController){
         ButtonCustom(
             modifier = Modifier.fillMaxWidth(),
             label = "Selanjutnya",
-            onCLick = {
+            onClick = {
                 navController.navigate("register")
             }
         )

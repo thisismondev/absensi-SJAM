@@ -8,20 +8,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun ButtonCustom(
     label: String,
     modifier: Modifier,
-    onCLick: () -> Unit
+    onClick: () -> Unit
 ){
 
     Button(
         onClick = {
-            onCLick
+            onClick()
         },
         modifier = modifier,
         shape = RoundedCornerShape(12.dp),
@@ -30,7 +30,8 @@ fun ButtonCustom(
         Text(
             text = label,
             style = MaterialTheme.typography.bodyLarge.copy(
-                fontWeight = FontWeight.SemiBold
+                fontSize = 14.sp,
+                lineHeight = 14.sp
             ),
             color = Color.White,
             modifier = Modifier.padding(6.dp),
@@ -47,6 +48,6 @@ fun PreviewButtonCompose(){
     ButtonCustom(
         label = "Selanjutnya",
         modifier = Modifier,
-        onCLick = {}
+        onClick = {}
     )
 }

@@ -1,5 +1,6 @@
 package id.co.mondo.sjam.ui.screen.auth
 
+import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -53,7 +55,7 @@ fun Login(navController: NavController) {
                 fontSize = 16.sp, fontWeight = FontWeight.Light,
             ),
         )
-        Spacer(Modifier.padding(24.dp))
+        Spacer(Modifier.height(24.dp))
         Column(
             verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
@@ -83,15 +85,16 @@ fun Login(navController: NavController) {
                 textAlign = TextAlign.End
             )
         }
-        Spacer(Modifier.padding(18.dp))
+        Spacer(Modifier.height(18.dp))
         ButtonCustom(
             modifier = Modifier.fillMaxWidth(),
             label = "Login",
-            onCLick = {
-
+            onClick = {
+                Log.d("Login", "Login Clicked")
+                navController.navigate("home")
             }
         )
-        Spacer(Modifier.padding(12.dp))
+        Spacer(Modifier.height(12.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center,

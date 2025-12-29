@@ -4,6 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import id.co.mondo.sjam.ui.screen.absen.HomeScreen
+import id.co.mondo.sjam.ui.screen.absen.RecapScreen
 import id.co.mondo.sjam.ui.screen.auth.Login
 import id.co.mondo.sjam.ui.screen.auth.Regist
 import id.co.mondo.sjam.ui.screen.auth.Regist2
@@ -22,7 +24,12 @@ fun sjamApp(){
         }
         composable("register"){
             Regist2(navController)
-
+        }
+        composable("home") {
+            HomeScreen(navController)
+        }
+        composable("recap") {
+            RecapScreen(navController)
         }
     }
 }
