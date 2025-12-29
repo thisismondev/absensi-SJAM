@@ -29,8 +29,7 @@ import id.co.mondo.sjam.ui.theme.green2
 import id.co.mondo.sjam.ui.theme.red1
 
 @Composable
-fun CardAbsensi(modifier: Modifier = Modifier) {
-
+fun CardAbsensi() {
     ElevatedCard(
         modifier = Modifier
             .fillMaxWidth(),
@@ -53,7 +52,7 @@ fun CardAbsensi(modifier: Modifier = Modifier) {
                 color = Color.Gray
             )
             Spacer(Modifier.height(12.dp))
-            Absen(modifier)
+            Absen()
         }
 
 
@@ -62,7 +61,7 @@ fun CardAbsensi(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun Absen(modifier: Modifier) {
+fun Absen() {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center,
@@ -129,7 +128,7 @@ fun Absen(modifier: Modifier) {
 fun PreviewCardAbsensi() {
     SJAMTheme {
         Column(Modifier.fillMaxSize()) {
-            CardAbsensi(Modifier)
+            CardAbsensi()
         }
     }
 }

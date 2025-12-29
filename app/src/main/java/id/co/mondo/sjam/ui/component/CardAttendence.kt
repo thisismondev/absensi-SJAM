@@ -5,8 +5,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
@@ -24,7 +24,8 @@ import androidx.compose.ui.unit.sp
 fun CardAttendence(){
     ElevatedCard(
         modifier = Modifier
-            .size(width = 335.dp, height = 300.dp),
+            .fillMaxWidth()
+            .height(300.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color.White
         ),

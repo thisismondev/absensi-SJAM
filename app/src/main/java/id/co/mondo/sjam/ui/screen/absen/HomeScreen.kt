@@ -57,9 +57,10 @@ fun HomeScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             HeadProfile(navController)
-            Spacer(Modifier.height(24.dp))
+            Spacer(Modifier.height(12.dp))
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -80,7 +81,7 @@ fun HomeScreen(
                 Text(
                     text = "Lihat Semua",
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color.Gray,
+                    color = Color.Black,
                     modifier = Modifier
                         .clickable(
                             onClick = {
@@ -89,7 +90,6 @@ fun HomeScreen(
                         )
                 )
             }
-            Spacer(Modifier.height(12.dp))
             Row(
                 Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -131,33 +131,12 @@ fun HomeScreen(
                     "Tidak hadir"
                 )
             }
-            Spacer(Modifier.height(12.dp))
             CardAttendence()
-            Spacer(Modifier.height(24.dp))
             Text(
                 text = "Absensi Hari Ini",
                 style = MaterialTheme.typography.bodyLarge
             )
-            Spacer(Modifier.height(12.dp))
-            CardAbsensi(Modifier.fillMaxWidth())
-            Spacer(Modifier.height(12.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = "Absensi 3 Hari Terakhir",
-                    style = MaterialTheme.typography.bodyLarge
-                )
-                Text(
-                    text = "Lihat Semua",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = Color.Gray,
-                )
-            }
-            CardAbsensi(Modifier.fillMaxWidth())
-            CardAbsensi(Modifier.fillMaxWidth())
+            CardAbsensi()
         }
     }
 }
